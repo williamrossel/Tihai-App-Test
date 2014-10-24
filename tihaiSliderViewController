@@ -1,0 +1,80 @@
+import UIKit
+
+class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()}
+    
+    @IBOutlet weak var slider1: UISlider!
+    @IBOutlet weak var slider2: UISlider!
+    @IBOutlet weak var slider3: UISlider!
+    @IBOutlet weak var slider4: UISlider!
+    @IBOutlet weak var slider5: UISlider!
+    @IBOutlet weak var slider6: UISlider!
+    
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var label3: UILabel!
+    @IBOutlet weak var label4: UILabel!
+    @IBOutlet weak var label5: UILabel!
+    @IBOutlet weak var label6: UILabel!
+  
+    @IBAction func slider1Master(sender: UISlider) {
+        slider3.value = slider1.value
+        slider5.value = slider1.value
+        label1.text = NSString(format: "%.2f", slider1.value)
+        label3.text = NSString(format: "%.2f", slider3.value)
+        label5.text = NSString(format: "%.2f", slider5.value)}
+    
+    @IBAction func slider2Master(sender: UISlider) {
+        slider3.value = slider2.value * -1/2
+        slider4.value = slider2.value * 1/2
+        slider5.value = slider2.value * -1
+        label2.text = NSString(format: "%.2f", slider2.value)
+        label3.text = NSString(format: "%.2f", slider3.value)
+        label4.text = NSString(format: "%.2f", slider4.value)
+        label5.text = NSString(format: "%.2f", slider5.value)}
+    
+    @IBAction func slider3Master(sender: UISlider) {
+        slider1.value = slider3.value
+        slider5.value = slider3.value
+        label1.text = NSString(format: "%.2f", slider1.value)
+        label3.text = NSString(format: "%.2f", slider3.value)
+        label5.text = NSString(format: "%.2f", slider5.value)}
+    
+    @IBAction func slider4Master(sender: UISlider) {
+        slider3.value = slider4.value * -1/2
+        slider2.value = slider4.value * 2
+        slider5.value = slider4.value * -2
+        label2.text = NSString(format: "%.2f", slider2.value)
+        label3.text = NSString(format: "%.2f", slider3.value)
+        label4.text = NSString(format: "%.2f", slider4.value)
+        label5.text = NSString(format: "%.2f", slider5.value)}
+    
+    @IBAction func slider5Master(sender: UISlider) {
+        slider3.value = slider5.value
+        slider1.value = slider5.value
+        label1.text = NSString(format: "%.2f", slider1.value)
+        label3.text = NSString(format: "%.2f", slider3.value)
+        label5.text = NSString(format: "%.2f", slider5.value)}
+    
+    @IBAction func slider6Master(sender: UISlider) {
+        slider1.value = slider6.value
+        slider2.value = slider6.value
+        slider3.value = slider6.value
+        slider4.value = slider6.value
+        slider5.value = slider6.value
+        label1.text = NSString(format: "%.2f", slider1.value)
+        label2.text = NSString(format: "%.2f", slider2.value)
+        label3.text = NSString(format: "%.2f", slider3.value)
+        label4.text = NSString(format: "%.2f", slider4.value)
+        label5.text = NSString(format: "%.2f", slider5.value)
+        label6.text = NSString(format: "%.2f", slider6.value)}
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+}
+

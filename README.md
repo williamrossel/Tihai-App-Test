@@ -1,2 +1,2 @@
-Tihai-App-Tests
+Tihai-App-Test
 ===============
